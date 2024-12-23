@@ -1,0 +1,133 @@
+.basket {
+    margin-top: 50px;
+
+    .emptyBasket {
+        font-size: 20px;
+    }
+
+    > div {
+        margin-top: 30px;
+        display: flex;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        .productsBasket {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1025px) {
+                width: 70%;
+            }
+    
+            .row {
+                display: flex;
+                justify-content: space-between;
+
+                    @media (max-width: 600px) {
+                        flex-direction: column;
+                    }
+                
+        
+                img {
+                    width: 50%;
+                    margin: auto;
+
+                    @media (min-width: 601px) {
+                        width: 20%;
+                        margin: 0;
+                    }
+                }
+    
+                > div {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    text-align: center;
+                    margin-top: 20px;
+
+                    @media (min-width: 601px) {
+                        width: 70%;
+                        text-align: start;
+                        margin-top: 0px;
+                    }
+    
+                    span {
+                        font-size: 20px;
+                    }
+
+                    .old {
+                        color: #808080;
+                        text-decoration: line-through;
+                    }
+    
+                    > form {
+
+                        @media (max-width: 1200px) {
+                            right: 0;
+                        }
+
+                        @media (min-width: 601px) {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .сostProductsBasket {
+            width: 100%;
+            text-align: end;
+
+            @media (min-width: 601px) {
+                width: 30%;
+            }
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                text-align: start;
+                margin-top: 50px;
+            }
+
+            h4 {
+                margin-bottom: 20px;
+                color: #ff5644;
+            }
+
+            .sale {
+                color: #808080;
+            }
+        }
+
+        .btn {
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 30px;
+            transition: all .6s ease;
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                transform: translateY(-5px) scale(1.05);
+                background-color: #ebe8e8;
+            }
+        }
+
+        .сostProductsBasketBtn {
+            margin-bottom: 20px;
+        }
+    }
+
+}

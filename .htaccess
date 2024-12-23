@@ -1,0 +1,24 @@
+# Отключание подписи сервера (например, 404 Not Found)
+ServerSignature Off
+
+# Установка кодировки
+AddDefaultCharset UTF-8
+
+# Отключение использования функции "MultiViews"
+Options -MultiViews
+
+# Включение модулей
+RewriteEngine On
+
+# Базовый путь для перенаправления
+RewriteBase /
+
+# Обработка остальных запросов
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Правило для перезаписи URL
+RewriteRule ^(.+)$ index.php?url=$1
+
+# Правило для отключения отображения ошибок и предупреждений на веб-странице (добавлять перед выгрузкой)
+php_flag display_errors Off
